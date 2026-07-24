@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /content-desk
-Disallow: /transfer-admin
-Sitemap: https://leedsbuzz.biz/sitemap.xml
