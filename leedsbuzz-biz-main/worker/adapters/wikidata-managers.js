@@ -1,2 +1,0 @@
-import { setState } from '../harvest-utils.js';
-export async function harvestWikidataManagers(env){const db=env.BLUE_ARCHIVE;let count=0;try{const row=await db.prepare(`SELECT COUNT(*) AS c FROM managers`).first();count=Number(row?.c||0);}catch{}await setState(db,'managers.last_checked_at',new Date().toISOString());return{imported:0,existing:count,note:'Manager catalogue retained; public cards are enriched from linked seasons, honours and timeline sources.'};}
