@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#020b20">
+  <meta name="description" content="Leeds United Transfer Radar: trusted transfer reports move towards the bullseye as evidence becomes stronger, with live updates from approved sources.">
+  <title>Leeds United Transfer Radar — LeedsBuzz.biz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="membership-v154.css?v=28.0.0">
+  <link rel="stylesheet" href="transfer-radar.css?v=28.0.0">
+<link rel="canonical" href="https://leedsbuzz.biz/transfers"></head>
+<body data-page="transfers" class="transfer-page">
+<div class="transfer-bg" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-mark">LB</span><span><strong>LEEDS BUZZ</strong><em>.BIZ</em></span></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">☰</button>
+  <nav id="mainNav">
+<a data-nav="home" href="/">Home</a>
+<a data-nav="vault" href="/white-vault">White Vault</a>
+<a data-nav="history" href="/history">History</a>
+<a data-nav="transfers" href="/transfers">Transfers</a>
+<a data-nav="xi" href="/build-your-xi">Build XI</a>
+<a data-nav="ask" href="/bizbot">BizBot</a>
+<a data-nav="news" href="/news">News</a>
+</nav>
+  <button class="profile-chip" data-member-control type="button">🟡 <span>My Leeds</span></button>
+</header>
+
+<main class="transfer-main">
+  <section class="transfer-hero transfer-shell">
+    <div>
+      <span class="transfer-kicker">LIVE CREDIBILITY ENGINE</span>
+      <h1>LEEDS UNITED <em>TRANSFER RADAR</em></h1>
+      <p>Trusted reports automatically place players on the radar. Stronger evidence moves a deal towards the bullseye; official confirmation moves it to Completed.</p>
+      <div class="hero-status" id="heroStatus"><i></i><span>Checking the live wire…</span></div>
+    </div>
+    <div class="hero-scoreboard">
+      <div><strong id="activeTargetCount">0</strong><span>ACTIVE TARGETS</span></div>
+      <div><strong id="advancedTargetCount">0</strong><span>ADVANCED OR CLOSER</span></div>
+      <div><strong id="sourceCount">0</strong><span>APPROVED SOURCES</span></div>
+      <div><strong id="lastRefresh">—</strong><span>LAST CHECK</span></div>
+    </div>
+  </section>
+
+  <section class="radar-controls transfer-shell">
+    <div class="direction-tabs" role="tablist" aria-label="Transfer direction">
+      <button class="active" data-direction="all">ALL ACTIVE</button>
+      <button data-direction="incoming">INCOMING</button>
+      <button data-direction="outgoing">OUTGOING</button>
+      <button data-direction="loans">LOANS</button>
+      <button data-direction="completed">COMPLETED</button>
+    </div>
+    <div class="radar-actions"><button id="refreshRadar" type="button">REFRESH VIEW</button><a href="/news">OPEN TRUSTED NEWS WIRE →</a></div>
+  </section>
+
+  <section class="radar-layout transfer-shell">
+    <div class="radar-panel transfer-glass">
+      <div class="radar-key" aria-label="Radar zone key">
+        <span><i class="zone-rumour"></i>Rumour</span><span><i class="zone-interest"></i>Interest</span><span><i class="zone-credible"></i>Credible</span><span><i class="zone-advanced"></i>Advanced</span><span><i class="zone-imminent"></i>Imminent</span>
+      </div>
+      <div class="radar-wrap" id="radarWrap">
+        <div class="radar-sweep"></div>
+        <div class="radar-cross horizontal"></div><div class="radar-cross vertical"></div>
+        <div class="radar-ring ring-1"><b>RUMOUR</b></div>
+        <div class="radar-ring ring-2"><b>INTEREST</b></div>
+        <div class="radar-ring ring-3"><b>CREDIBLE</b></div>
+        <div class="radar-ring ring-4"><b>ADVANCED</b></div>
+        <div class="radar-ring ring-5"><b>IMMINENT</b></div>
+        <div class="radar-centre"><span>LEEDS</span><b>BULLSEYE</b></div>
+        <div id="radarTargets" class="radar-targets" aria-live="polite"></div>
+      </div>
+      <div class="radar-empty" id="radarEmpty" hidden><strong>No active targets are loaded yet.</strong><p>The radar will populate automatically when an approved source publishes a Leeds United transfer report.</p></div>
+    </div>
+
+    <aside class="deal-panel transfer-glass" id="dealPanel">
+      <div class="deal-placeholder"><span>SELECT A PLAYER</span><h2>Open any radar marker.</h2><p>You will see the strongest source, confidence, movement and supporting reports.</p></div>
+    </aside>
+  </section>
+
+  <section class="movement-section transfer-shell">
+    <header class="transfer-section-head"><div><span>EVIDENCE, NOT NOISE</span><h2>LATEST RADAR MOVEMENT</h2></div><p>Every movement keeps the original post attached so supporters can see why the player sits in that ring.</p></header>
+    <div class="movement-grid" id="movementGrid"><div class="loading-card">Loading trusted reports…</div></div>
+  </section>
+
+  <section class="completed-section transfer-shell" id="completedSection" hidden>
+    <header class="transfer-section-head"><div><span>WINDOW BUSINESS</span><h2>COMPLETED DEALS</h2></div><p>Officially confirmed signings, exits and loans leave the active radar and move here.</p></header>
+    <div class="completed-grid" id="completedGrid"></div>
+  </section>
+
+  <section class="method-section transfer-shell transfer-glass">
+    <div><span>HOW THE RADAR DECIDES</span><h2>A tweet does not automatically mean “imminent”.</h2></div>
+    <ol><li><b>Approved source only.</b> Unapproved fan accounts cannot move the radar.</li><li><b>Wording matters.</b> Monitoring stays outside; contact, bids, talks, agreement and medicals move progressively inward.</li><li><b>Corroboration matters.</b> Independent trusted reports increase confidence.</li><li><b>Official wins.</b> A Leeds United announcement closes the deal and moves it to Completed.</li></ol>
+  </section>
+</main>
+
+<footer class="footer"><div class="footer-grid"><div><a class="brand" href="/"><span class="brand-mark">LB</span><span><strong>LEEDS BUZZ</strong><em>.BIZ</em></span></a><p>All the Buzz. All the Biz.</p></div><small>Independent Leeds football supporter platform. Not affiliated with, authorised by or endorsed by Leeds United Football Club. News and transfer items link to their original sources.</small></div></footer>
+<script src="app.js"></script>
+<script src="membership-v154.js?v=28.0.0" defer></script>
+<script src="transfer-radar.js?v=28.0.0" defer></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BizBot — LeedsBuzz.biz</title>
+  <meta name="description" content="Meet BizBot, your Leeds United companion. Chat, debate and ask anything about Leeds United — matches, players, tactics, transfers, history, predictions and opinions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bizbot.css">
+<link rel="canonical" href="https://leedsbuzz.biz/bizbot"></head>
+<body data-page="ask">
+<div class="noise" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-mark">LB</span><span><strong>LEEDS BUZZ</strong><em>.BIZ</em></span></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">☰</button>
+  <nav id="mainNav">
+<a data-nav="home" href="/">Home</a>
+<a data-nav="vault" href="/white-vault">White Vault</a>
+<a data-nav="history" href="/history">History</a>
+<a data-nav="transfers" href="/transfers">Transfers</a>
+<a data-nav="xi" href="/build-your-xi">Build XI</a>
+<a data-nav="ask" href="/bizbot">BizBot</a>
+<a data-nav="news" href="/news">News</a>
+</nav>
+  <button class="profile-chip">🟡 <span>My Leeds</span></button>
+</header>
+
+<main class="bizbot-companion-page">
+  <section class="shell companion-heading">
+    <div>
+      <div class="companion-kicker"><span class="live-dot"></span> YOUR LEEDS UNITED COMPANION</div>
+      <h1>BIZ<span>BOT</span></h1>
+      <p><strong>Chat. Debate. Ask anything.</strong> From today's team to a match in 1972 — talk Leeds United with a companion that is always up for it.</p>
+    </div>
+  </section>
+
+  <section class="shell companion-layout" aria-label="BizBot Leeds United companion chat">
+    <aside class="companion-card">
+      <div class="companion-card-glow" aria-hidden="true"></div>
+
+      <div class="avatar-stage" id="bizAvatarStage">
+        <div class="avatar-speech" id="avatarSpeech" aria-live="polite">
+          <span id="avatarSpeechText">Morning. What’s on your mind?</span>
+          <i aria-hidden="true"></i>
+        </div>
+
+        <div class="bizbot-avatar state-idle" id="bizAvatar" role="img" aria-label="BizBot, your Leeds United companion">
+          <div class="avatar-shadow" aria-hidden="true"></div>
+          <div class="avatar-body" aria-hidden="true">
+            <div class="avatar-head">
+              <div class="avatar-hair"></div>
+              <div class="avatar-ear avatar-ear-left"></div>
+              <div class="avatar-ear avatar-ear-right"></div>
+              <div class="avatar-brow avatar-brow-left"></div>
+              <div class="avatar-brow avatar-brow-right"></div>
+              <div class="avatar-eye avatar-eye-left"></div>
+              <div class="avatar-eye avatar-eye-right"></div>
+              <div class="avatar-glasses">
+                <span></span><b></b><span></span>
+              </div>
+              <div class="avatar-nose"></div>
+              <div class="avatar-mouth"><span></span></div>
+            </div>
+            <div class="avatar-neck"></div>
+            <div class="avatar-shirt">
+              <div class="avatar-collar"></div>
+              <div class="avatar-badge">C</div>
+              <div class="avatar-shirt-name">BIZ</div>
+            </div>
+            <div class="avatar-arm avatar-arm-left"><span></span></div>
+            <div class="avatar-arm avatar-arm-right"><span></span></div>
+          </div>
+          <div class="avatar-thinking-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+
+      <div class="companion-identity">
+        <div>
+          <h2>BizBot</h2>
+          <p>Your Leeds United companion</p>
+        </div>
+        <div class="companion-status" title="BizBot connection status">
+          <span id="bizStatusDot" class="biz-status-dot"></span>
+          <span id="bizStatusText">Checking in…</span>
+        </div>
+      </div>
+
+      <p class="companion-description">Ask a fact, argue your case, relive a classic, talk tactics or just have a proper Leeds United conversation.</p>
+
+      <div class="companion-actions">
+        <button id="bizVoiceToggle" class="companion-action" type="button" aria-pressed="false" title="Read BizBot replies aloud">
+          <span class="action-icon" aria-hidden="true">◖</span>
+          <span id="bizVoiceLabel">Voice off</span>
+        </button>
+        <button id="bizNewChat" class="companion-action" type="button">
+          <span class="action-icon" aria-hidden="true">＋</span>
+          <span>New chat</span>
+        </button>
+      </div>
+
+      <div class="conversation-starters">
+        <span class="starters-label">Start a conversation</span>
+        <button class="biz-suggestion">Where do you think Leeds United will finish this season?</button>
+        <button class="biz-suggestion">Let's talk about Leeds United's style of play.</button>
+        <button class="biz-suggestion">Who is Leeds United's greatest ever player?</button>
+        <button class="biz-suggestion">Take me back to a classic Leeds United match.</button>
+        <button class="biz-suggestion">Build your all-time Leeds XI with me.</button>
+      </div>
+    </aside>
+
+    <section class="chat-card">
+      <header class="chat-header">
+        <div class="chat-header-avatar" aria-hidden="true">
+          <span class="mini-eye left"></span><span class="mini-eye right"></span><span class="mini-glasses"></span>
+        </div>
+        <div>
+          <strong>BizBot</strong>
+          <span>Chat • Debate • Ask anything Leeds United</span>
+        </div>
+        <div class="chat-live"><span></span> Online</div>
+      </header>
+
+      <div class="bizbot-messages" id="bizMessages" aria-live="polite">
+        <div class="biz-message bot">
+          <div class="message-avatar" aria-hidden="true"><span>BB</span></div>
+          <div class="message-wrap">
+            <b>BizBot</b>
+            <div class="message-bubble"><p>Morning. I’m BizBot — your Leeds United companion. Ask me anything about Leeds United, or just talk to me. Matches, players, tactics, transfers, history, predictions, opinions — whatever’s on your mind.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-composer-wrap">
+        <div class="chat-hint">Ask a question, make a prediction or start an argument — BizBot can handle all three.</div>
+        <form id="bizForm" class="bizbot-input">
+          <textarea id="bizInput" rows="1" maxlength="1200" autocomplete="off" placeholder="Talk Leeds United with BizBot…" aria-label="Talk Leeds United with BizBot"></textarea>
+          <button type="submit" aria-label="Send message"><span>Send</span><i aria-hidden="true">➜</i></button>
+        </form>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="footer"><div class="footer-grid"><div><a class="brand" href="/"><span class="brand-mark">LB</span><span><strong>LEEDS BUZZ</strong><em>.BIZ</em></span></a><p>All the Buzz. All the Biz.</p></div><small>Independent Leeds football supporter platform. Not affiliated with, authorised by or endorsed by Leeds United Football Club. News and transfer items link to their original sources.</small></div></footer>
+<script src="app.js"></script>
+<script src="bizbot.js"></script>
+</body></html>

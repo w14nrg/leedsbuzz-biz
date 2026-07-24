@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>My Leeds | LeedsBuzz.biz</title>
+  <meta name="description" content="Your free LeedsBuzz.biz member profile, Leeds United preferences and companion settings.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/membership-v154.css?v=28.0.0">
+  <link rel="stylesheet" href="/account.css?v=28.0.0">
+<link rel="canonical" href="https://leedsbuzz.biz/account"></head>
+<body data-page="account">
+  <header class="account-topbar">
+    <a class="account-logo" href="/">LEEDS UNITED<span>.BIZ</span></a>
+    <nav>
+      <a href="/">Home</a><a href="/white-vault">White Vault</a><a href="/history">History</a><a href="/transfers">Transfers</a><a href="/build-your-xi">Build XI</a><a href="/bizbot">BizBot</a><a href="/news">News</a>
+    </nav>
+    <button class="account-member-pill" data-member-control type="button"><span class="cb-member-dot"></span><span>My Leeds</span></button>
+  </header>
+
+  <main class="account-shell">
+    <section class="account-hero">
+      <span>MY LEEDS</span>
+      <h1>Your Leeds United account.</h1>
+      <p>Your profile, BizBot preferences, predictions, saved XI and everything personal to your Leeds United experience will live here.</p>
+    </section>
+
+    <section id="accountWelcome" class="account-welcome" hidden>
+      <div class="account-welcome-icon">✓</div>
+      <div><span>SIGNED IN</span><h2 id="accountWelcomeTitle">Welcome to LeedsBuzz.biz.</h2><p>Your free Leeds Member account is active.</p></div>
+    </section>
+
+    <div id="accountLoading" class="account-loading">Checking your membership…</div>
+
+    <section id="accountSignedOut" class="account-panel" hidden>
+      <div id="accountAuthMessage" class="account-auth-message" hidden></div>
+      <div class="account-empty-icon">C</div>
+      <h2>Log in or create an account</h2>
+      <p>Already a Leeds Member? Log in with the email you used when you joined. New here? Create a free account.</p>
+      <div class="account-auth-actions">
+        <button id="accountLogin" class="account-primary" type="button">Log in</button>
+        <button id="accountCreate" class="account-secondary" type="button">Create free account</button>
+      </div>
+      <p class="account-private-note">A passwordless login sends a fresh email link. Use a normal browser—not Incognito—to remain signed in for 30 days.</p>
+    </section>
+
+    <section id="accountDashboard" hidden>
+      <div class="account-grid">
+        <article class="account-panel account-profile-card">
+          <div class="account-panel-head">
+            <div><span>LEEDS MEMBER · SIGNED IN</span><h2 id="accountGreeting">My Leeds</h2></div>
+            <b>FREE</b>
+          </div>
+          <div class="account-email" id="accountEmail"></div>
+          <div class="account-joined" id="accountJoined"></div>
+          <div class="account-active"><i></i> Membership active</div>
+        </article>
+
+        <article class="account-panel account-membership-card">
+          <span>YOUR ACCOUNT</span>
+          <h2>Everything personal starts here.</h2>
+          <div class="account-feature-list">
+            <a href="#profile"><b>My Leeds profile</b><small>Available now</small></a>
+            <div><b>Saved BizBot conversations</b><small>Coming next</small></div>
+            <div><b>Predictions</b><small>Coming next</small></div>
+            <a href="#my-vault"><b>My Vault ratings & favourites</b><small>Available now</small></a>
+            <a href="#my-xis"><b>My XI</b><small>Available now</small></a>
+          </div>
+        </article>
+      </div>
+
+      <form id="accountProfileForm" class="account-panel account-form">
+        <div id="profile" class="account-section-title"><span>YOUR LEEDS UNITED PROFILE</span><h2>Tell BizBot who he’s talking football with.</h2></div>
+        <div class="account-fields">
+          <label>What should we call you?<input name="displayName" maxlength="50" placeholder="Nickname or first name"></label>
+          <label>Favourite current Leeds United player<input name="favouriteCurrentPlayer" maxlength="80" placeholder="e.g. Ao Tanaka"></label>
+          <label>Favourite Leeds United player ever<input name="favouriteEverPlayer" maxlength="80" placeholder="e.g. Billy Bremner"></label>
+          <label>Favourite Leeds United era<input name="favouriteEra" maxlength="80" placeholder="e.g. Don Revie 1961–74"></label>
+          <label>Preferred formation<input name="preferredFormation" maxlength="30" placeholder="e.g. 4-2-3-1"></label>
+          <label>Where will Leeds United finish?<input name="predictedFinish" maxlength="30" placeholder="e.g. 3rd"></label>
+          <label class="account-wide">Favourite Leeds United memory<textarea name="favouriteMemory" maxlength="500" rows="4" placeholder="Wembley 1972, Bielsa promotion, your first game at Elland Road…"></textarea></label>
+          <label class="account-checkbox account-wide"><input type="checkbox" name="marketingOptIn"><span>Email me occasional LeedsBuzz.biz updates. No spam.</span></label>
+        </div>
+        <div class="account-actions"><button class="account-primary" type="submit">Save My Leeds</button><span id="accountSaveStatus"></span></div>
+      </form>
+
+
+      <section id="my-vault" class="account-panel account-fan-panel">
+        <div class="account-section-title"><span>MY WHITE VAULT</span><h2>Your ratings and favourite players.</h2></div>
+        <div class="account-fan-columns"><div><div class="account-mini-head"><h3>Favourite players</h3><a href="/white-vault">Open White Vault</a></div><div id="accountFavourites" class="account-player-list"><p>Loading favourites…</p></div></div><div><div class="account-mini-head"><h3>Your fan ratings</h3><span>0–100</span></div><div id="accountRatings" class="account-player-list"><p>Loading ratings…</p></div></div></div>
+      </section>
+      <section id="my-xis" class="account-panel account-fan-panel">
+        <div class="account-section-title"><span>BUILD YOUR XI</span><h2>Your saved Leeds United teams.</h2></div>
+        <div id="accountXis" class="account-xi-list"><p>Loading saved XIs…</p></div>
+        <a class="account-primary account-inline-link" href="/build-your-xi">Build a new XI</a>
+      </section>
+
+      <section id="my-activity" class="account-panel account-fan-panel">
+        <div class="account-section-title"><span>RECENT ACTIVITY</span><h2>Your recently viewed players and comparisons.</h2></div>
+        <div class="account-fan-columns"><div><div class="account-mini-head"><h3>Recently viewed</h3><a href="/white-vault">Open White Vault</a></div><div id="accountRecentPlayers" class="account-player-list"><p>No recent players yet.</p></div></div><div><div class="account-mini-head"><h3>Recent comparisons</h3><span>Stored on this browser</span></div><div id="accountRecentComparisons" class="account-player-list account-comparison-list"><p>No recent comparisons yet.</p></div></div></div>
+      </section>
+
+      <section class="account-panel account-control-panel">
+        <div><span>ACCOUNT SETTINGS</span><h3>Membership controls</h3><p>You are logged in for 30 days on this browser. You can log out now or permanently delete your account.</p></div>
+        <div class="account-control-actions"><button id="accountLogout" class="account-logout" type="button">Log out</button><button id="accountDelete" class="account-delete" type="button">Delete account</button></div>
+      </section>
+    </section>
+  </main>
+  <script src="/membership-v154.js?v=28.0.0" defer></script>
+  <script src="/account.js?v=28.0.0" defer></script>
+</body>
+</html>
