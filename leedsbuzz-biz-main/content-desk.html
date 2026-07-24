@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#020b20">
+  <title>LeedsBuzz.biz Content Desk</title>
+  <link rel="manifest" href="/content-desk-manifest.webmanifest">
+  <link rel="icon" href="/content-desk-icon-192.png">
+  <link rel="apple-touch-icon" href="/content-desk-icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/content-desk.css?v=28.0.0">
+</head>
+<body>
+<header class="desk-top"><a href="/">← LeedsBuzz.biz</a><strong>LEEDSBUZZ.BIZ <span>CONTENT DESK</span></strong><a href="/transfer-admin">Radar controls</a></header>
+<main class="desk-shell">
+  <section class="desk-hero"><div><span>BRANDON + BIZBOT</span><h1>Fast Leeds United content, with a human voice.</h1><p>BizBot monitors the trusted wire, updates LeedsBuzz.biz and prepares factual posts and replies. Brandon opens X and publishes them himself.</p></div><div id="deskStatus" class="status-pill">Not connected</div></section>
+
+  <section class="desk-card token-card">
+    <label for="adminToken">BIZBOT_ADMIN_TOKEN</label>
+    <div><input id="adminToken" type="password" autocomplete="current-password" placeholder="Paste the admin token"><button id="saveToken" type="button">USE TOKEN</button><button id="testX" type="button" title="This makes a live X API read and can use a small amount of API credit.">TEST X READING (USES CREDIT)</button></div>
+    <label class="remember-row"><input id="rememberToken" type="checkbox"> Remember this private device</label>
+  </section>
+
+  <section class="desk-card alert-card">
+    <div class="section-head"><div><span class="eyebrow">PHONE + PC ALERTS</span><h2>Alert Brandon immediately</h2></div><div class="alert-actions"><button id="enableAlerts" type="button">ENABLE DEVICE ALERTS</button><button id="testAlert" type="button">TEST ALERT</button><button id="installDesk" type="button" hidden>INSTALL DESK</button></div></div>
+    <p>When this desk is open or installed, it can ring and vibrate when a new opportunity arrives. For reliable alerts while it is closed, connect the optional Telegram or webhook alert in Cloudflare.</p>
+  </section>
+
+  <section class="status-grid" id="statusGrid">
+    <article class="desk-card"><span>READING X</span><strong>—</strong></article>
+    <article class="desk-card"><span>POSTING METHOD</span><strong>—</strong></article>
+    <article class="desk-card"><span>PAID API POSTING</span><strong>DISABLED</strong></article>
+    <article class="desk-card"><span>HUMAN REPLIES</span><strong>BRANDON</strong></article>
+    <article class="desk-card"><span>DEVICE ALERTS</span><strong id="alertState">OFF</strong></article>
+  </section>
+
+  <section class="desk-grid two">
+    <article class="desk-card"><div class="section-head"><div><span class="eyebrow">LIVE AUTOMATION</span><h2>Process the latest Leeds United posts</h2></div><button id="processNow" title="This performs live X API reads and uses prepaid credit.">CHECK X NOW (USES CREDIT)</button></div><p>Checks approved X accounts, updates News and the Transfer Radar, and creates factual post and human-reply drafts. This manual check uses prepaid X API credit; the scheduled monitor already runs automatically. Posting opens in X so Brandon can publish without an API posting charge.</p><pre id="processResult">Waiting.</pre></article>
+    <article class="desk-card"><span class="eyebrow">ORIGINAL CONTENT</span><h2>Post Brandon’s own update</h2><textarea id="originalText" maxlength="280" rows="6" placeholder="Matchday atmosphere, supporter reaction, opinion or original Leeds United update…"></textarea><div class="composer-row"><small><b id="charCount">0</b>/280</small><button id="publishOriginal" class="primary">OPEN IN X</button></div></article>
+  </section>
+
+  <section class="desk-card"><div class="section-head"><div><span class="eyebrow">OPPORTUNITY QUEUE</span><h2>Posts worth reacting to</h2></div><button id="reloadDesk">RELOAD</button></div><div id="opportunityList" class="opportunity-list">Loading…</div></section>
+
+  <section class="desk-grid two">
+    <article class="desk-card"><div class="section-head"><div><span class="eyebrow">SITE & DATA HEALTH</span><h2>Automated accuracy audit</h2></div><button id="runAudit">RUN AUDIT</button></div><div id="auditSummary" class="audit-summary">No report loaded.</div><div id="auditIssues" class="issue-list"></div></article>
+    <article class="desk-card"><span class="eyebrow">MATCHDAY CONTENT</span><h2>Original footage checklist</h2><div class="checklist"><label><input type="checkbox"> Walk to Elland Road</label><label><input type="checkbox"> Crowd buildup and flags</label><label><input type="checkbox"> One-question fan prediction</label><label><input type="checkbox"> Half-time reaction</label><label><input type="checkbox"> Full-time reaction outside the ground</label><label><input type="checkbox"> One strong original opinion</label></div><p>Short vertical clips, real voices and fast posting keep the account human while BizBot handles the live desk.</p></article>
+  </section>
+
+  <section class="desk-card"><span class="eyebrow">RECENT ACTIVITY</span><h2>Prepared and published content</h2><p>BizBot keeps the source and draft history here. New posts and replies open in X for Brandon to publish manually, without an API posting charge.</p><div id="publicationList" class="publication-list">Loading…</div></section>
+</main>
+<script src="/content-desk.js?v=28.0.0"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "datasetVersion": "2026-07-24-leedsbuzz-launch-v1",
+  "checksum": "f7afb48ae229d0db",
+  "snapshotDate": "2026-07-24",
+  "historicalPlayersWith50PlusAppearances": 78,
+  "playersWith100PlusAppearances": 71,
+  "playersWith500PlusAppearances": 9,
+  "currentFirstTeamPlayers": 22,
+  "currentPlayersUnder50IncludedSeparately": 17,
+  "totalPublicVaultProfiles": 95,
+  "duplicateHistoricalSlugs": 0,
+  "historicalRowsBelow50": 0,
+  "archiveStatus": "Launch archive; additional verified 50+ players can be added without changing the site structure.",
+  "sources": [
+    {
+      "title": "Leeds United official men’s squad",
+      "url": "https://www.leedsunited.com/en/teams/men",
+      "snapshot": "2026-07-24"
+    },
+    {
+      "title": "Leeds United official honours",
+      "url": "https://www.leedsunited.com/en/club-honours",
+      "snapshot": "2026-07-24"
+    },
+    {
+      "title": "List of Leeds United F.C. players",
+      "url": "https://en.wikipedia.org/wiki/List_of_Leeds_United_F.C._players",
+      "snapshot": "2026-06-01"
+    }
+  ],
+  "currentPlayersWithTotalsPendingVerification": 17
+}

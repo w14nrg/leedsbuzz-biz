@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#020b20">
+  <title>Transfer Radar Control — LeedsBuzz.biz</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="transfer-admin.css?v=24.0.0">
+</head>
+<body>
+<header class="admin-top"><a href="/transfers">← Transfer Radar</a><strong>LEEDSBUZZ.BIZ <span>RADAR CONTROL</span></strong><a href="/content-desk">Content Desk →</a></header>
+<main class="admin-shell">
+  <section class="admin-hero">
+    <div><span>OWNER CONTROL PANEL</span><h1>Transfer Radar emergency controls</h1><p>The public radar is automatic. Use this page only to force a refresh, correct a target or change an approved source.</p></div>
+    <div id="adminStatus" class="admin-status">Not connected</div>
+  </section>
+
+  <section class="admin-card token-card">
+    <label for="adminToken">Cloudflare secret: BIZBOT_ADMIN_TOKEN</label>
+    <div><input id="adminToken" type="password" autocomplete="off" placeholder="Paste the admin token"><button id="saveToken" type="button">USE TOKEN</button></div>
+    <small>The token stays in this browser tab only and is never written into the website files.</small>
+  </section>
+
+  <section class="admin-grid">
+    <article class="admin-card">
+      <span class="eyebrow">AUTOMATION</span><h2>Run a check now</h2><p>The scheduled system normally checks automatically. This button is for testing or an urgent refresh.</p><button class="primary" id="forceRefresh" type="button">REFRESH APPROVED X SOURCES</button><pre id="refreshResult">Waiting.</pre>
+    </article>
+
+    <article class="admin-card">
+      <span class="eyebrow">TARGET OVERRIDE</span><h2>Correct a player</h2>
+      <form id="overrideForm">
+        <label>Player name<input name="playerName" required placeholder="Player name"></label>
+        <label>Direction<select name="direction"><option value="incoming">Incoming</option><option value="outgoing">Outgoing</option><option value="loan-in">Loan in</option><option value="loan-out">Loan out</option></select></label>
+        <label>Radar zone<select name="stage"><option value="1">1 — Rumour</option><option value="2">2 — Reported interest</option><option value="3">3 — Credible</option><option value="4">4 — Advanced</option><option value="5">5 — Imminent</option><option value="6">6 — Completed</option></select></label>
+        <label>Reason<textarea name="note" rows="3" placeholder="Why this manual position is needed"></textarea></label>
+        <label class="check"><input name="hidden" type="checkbox"> Hide this target</label>
+        <button class="primary" type="submit">SAVE OVERRIDE</button>
+      </form>
+    </article>
+
+    <article class="admin-card">
+      <span class="eyebrow">TRUSTED SOURCES</span><h2>Add or change a source</h2>
+      <form id="sourceForm">
+        <label>X handle<input name="handle" required placeholder="FabrizioRomano"></label>
+        <label>Display name<input name="displayName" required placeholder="Fabrizio Romano"></label>
+        <label>Tier<select name="tier"><option value="official">Official</option><option value="elite">Elite</option><option value="trusted" selected>Trusted</option><option value="watch">Watch</option></select></label>
+        <label>Reliability weight<input name="weight" type="number" min="1" max="100" value="80"></label>
+        <label class="check"><input name="official" type="checkbox"> Official club source</label>
+        <label class="check"><input name="enabled" type="checkbox" checked> Enabled</label>
+        <button class="primary" type="submit">SAVE SOURCE</button>
+      </form>
+    </article>
+  </section>
+
+  <section class="admin-card">
+    <div class="section-head"><div><span class="eyebrow">LIVE DATABASE</span><h2>Current targets and approved sources</h2></div><button id="reloadBoard" type="button">RELOAD</button></div>
+    <div class="board-grid"><div><h3>Targets</h3><div id="targetBoard" class="board-list">Loading…</div></div><div><h3>Sources</h3><div id="sourceBoardAdmin" class="board-list">Loading…</div></div></div>
+  </section>
+</main>
+<script src="transfer-admin.js?v=24.0.0"></script>
+</body>
+</html>

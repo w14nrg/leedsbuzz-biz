@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>BizBot Admin Harvest</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bizbot.css">
+  <style>
+    body{min-height:100vh;background:#07142f;color:#fff}
+    .admin-wrap{max-width:900px;margin:0 auto;padding:48px 24px}
+    .admin-card{background:rgba(9,31,72,.92);border:1px solid rgba(92,176,255,.25);border-radius:24px;padding:28px;margin:18px 0}
+    .admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .admin-btn{border:0;border-radius:14px;padding:15px 16px;font-weight:800;cursor:pointer;background:#1877ff;color:white}
+    .admin-btn.secondary{background:#12305f}
+    .admin-input{width:100%;box-sizing:border-box;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#061a3d;color:white}
+    pre{white-space:pre-wrap;word-break:break-word;background:#04112a;padding:16px;border-radius:14px;min-height:80px}
+    .muted{color:#a9c7ef}
+  </style>
+</head>
+<body>
+  <main class="admin-wrap">
+    <h1>BizBot Admin Harvest</h1>
+    <p class="muted">Private maintenance control. The token stays in this browser session and is never written to GitHub.</p>
+
+    <section class="admin-card">
+      <label for="adminToken"><b>Admin token</b></label>
+      <input id="adminToken" class="admin-input" type="password" autocomplete="off" placeholder="Enter BIZBOT_ADMIN_TOKEN">
+      <p class="muted">Create the same value as a Cloudflare Worker secret named <code>BIZBOT_ADMIN_TOKEN</code>.</p>
+    </section>
+
+    <section class="admin-card">
+      <h2>Run a harvest now</h2>
+      <div class="admin-grid">
+        <button class="admin-btn" data-source="football-data">Refresh live football</button>
+        <button class="admin-btn" data-source="wikidata-players">Refresh players</button>
+        <button class="admin-btn" data-source="wikidata-managers">Refresh managers</button>
+        <button class="admin-btn" data-source="wikidata-honours">Refresh honours</button>
+        <button class="admin-btn" data-source="openfootball-history">Import historical league matches</button>
+        <button class="admin-btn secondary" data-source="all">Run full harvest</button>
+      </div>
+    </section>
+
+    <section class="admin-card">
+      <h2>Result</h2>
+      <pre id="adminResult">Ready.</pre>
+    </section>
+  </main>
+  <script src="bizbot-admin.js"></script>
+</body>
+</html>
